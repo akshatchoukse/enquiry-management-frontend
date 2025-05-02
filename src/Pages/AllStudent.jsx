@@ -8,7 +8,7 @@ function AllStudent() {
     college_name: '',
     student_name: '',
     student_contactno: '',
-    student_email: ''
+    student_year: ''
   });
   const [allStudent, setAllStudent] = useState([]);
   const [editingId, setEditingId] = useState(null);
@@ -99,8 +99,8 @@ function AllStudent() {
           />
           <input
             value={studentObj.student_email}
-            onChange={(e) => setStudentObj({ ...studentObj, student_email: e.target.value })}
-            placeholder="Enter Email"
+            onChange={(e) => setStudentObj({ ...studentObj, student_year: e.target.value })}
+            placeholder="Enter Student Year"
             className="border border-gray-300 rounded p-3 w-full"
           />
         </div>
@@ -132,7 +132,7 @@ function AllStudent() {
               <th className="px-4 py-3 text-sm text-left">College Name</th>
               <th className="px-4 py-3 text-sm text-left">Student Name</th>
               <th className="px-4 py-3 text-sm text-left">Contact No</th>
-              <th className="px-4 py-3 text-sm text-left">Email</th>
+              <th className="px-4 py-3 text-sm text-left">Year</th>
               <th className="px-4 py-3 text-sm text-left">Actions</th>
             </tr>
           </thead>
@@ -143,7 +143,7 @@ function AllStudent() {
                 <td className="px-4 py-3 text-sm">{student.college_name}</td>
                 <td className="px-4 py-3 text-sm">{student.student_name}</td>
                 <td className="px-4 py-3 text-sm">{student.student_contactno}</td>
-                <td className="px-4 py-3 text-sm">{student.student_email}</td>
+                <td className="px-4 py-3 text-sm">{student.student_year}</td>
                 <td className="px-4 py-3 text-sm space-x-2">
                   <button
                     onClick={() => handleEdit(student)}
